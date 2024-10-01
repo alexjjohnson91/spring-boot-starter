@@ -1,4 +1,4 @@
-package com.alexjohnson.spring_boot_starter;
+package com.alexjohnson.SpringBootStarter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
