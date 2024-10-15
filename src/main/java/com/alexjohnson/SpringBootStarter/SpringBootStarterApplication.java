@@ -10,7 +10,7 @@ public class SpringBootStarterApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(SpringBootStarterApplication.class, args);
-    log.info("Hello Spring Boot!");
+    log.info("Hello World!");
   }
 
 }
