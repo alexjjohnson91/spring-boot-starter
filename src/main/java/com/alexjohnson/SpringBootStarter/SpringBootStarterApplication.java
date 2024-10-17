@@ -12,5 +12,4 @@ public class SpringBootStarterApplication {
     SpringApplication.run(SpringBootStarterApplication.class, args);
     log.info("Hello Spring Boot!");
   }
-
 }
