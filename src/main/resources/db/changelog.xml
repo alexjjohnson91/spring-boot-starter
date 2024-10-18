@@ -1,0 +1,41 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="alex.johnson">
+        <createTable tableName="countries">
+            <column name="id" type="INT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="alex.johnson">
+        <insert tableName="countries">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="USA"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="France"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Brazil"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Italy"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="Canada"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
