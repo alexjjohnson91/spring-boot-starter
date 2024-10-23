@@ -2,14 +2,15 @@ package com.alexjohnson.SpringBootStarter;
 
 import java.util.List;
 import java.util.Optional;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-public interface GrowthPlanRepository extends Repository<GrowthPlan, String> {
-  @RestResource(path = "findByGrowthPlanId")
-  Optional<GrowthPlan> findByGrowthPlanId(GrowthPlan id);
+@RestResource(exported = false)
+public interface GrowthPlanRepository
+    extends JpaRepository<GrowthPlan, String> {
+  @RestResource(path = "findById") Optional<GrowthPlan> findById(GrowthPlan id);
 
   List<GrowthPlan> findAll();
 
-  GrowthPlan save(GrowthPlan growthPlan);
+  GrowthPlan save(GrowthPlan entity);
 }
