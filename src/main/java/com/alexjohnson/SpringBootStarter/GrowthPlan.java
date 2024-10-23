@@ -1,38 +1,37 @@
 package com.alexjohnson.SpringBootStarter;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.sql.Date;
+import java.time.Instant;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
+@Entity
 @ToString
 @Getter
 @Setter
+@Table(name = "growth_plan")
 public class GrowthPlan {
-  // Where is the Opportunity
-  String opportunity;
-  // Next Step in Growth
-  String nextStep;
-  // What we want to Achieve-Growth Assessment
-  String growthAssessment;
-  // Goal/Target
-  String goal;
-  // Start Date
-  Date startDate;
-  // Status
-  String status;
-  // Age
-  int age;
 
-  public GrowthPlan(String opportunity, String nextStep,
-                    String growthAssessment, String goal, Date startDate,
-                    String status, int age) {
-    this.opportunity = opportunity;
-    this.nextStep = nextStep;
-    this.growthAssessment = growthAssessment;
-    this.goal = goal;
-    this.startDate = startDate;
-    this.status = status;
-    this.age = age;
-  }
+  @Id @GeneratedValue(strategy = GenerationType.UUID) private String id;
+  private String result;
+  private String opportunity;
+  private String nextStep;
+  private String growthAssessment;
+  private String goal;
+  private Date startDate;
+  private String status;
+  private int age;
+  private String notes;
+
+  @CreatedDate private Instant createdAt;
+
+  @LastModifiedDate private Instant updatedAt;
 }

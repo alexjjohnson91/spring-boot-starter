@@ -37,5 +37,38 @@
             <column name="name" value="Canada"/>
         </insert>
     </changeSet>
-
+    <changeSet id="3" author="alex.johnson">
+      <createTable tableName="growth_plan">
+        <column name="id" type="VARCHAR(255)">
+          <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="result" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="opportunity" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="next_step" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="growth_assessment" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="goal" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="start_date" type="DATE">
+          <constraints nullable="true"/>
+        </column>
+        <column name="status" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="age" type="INT">
+          <constraints nullable="true"/>
+        </column>
+        <column name="notes" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+      </createTable>
+    </changeSet>
 </databaseChangeLog>
