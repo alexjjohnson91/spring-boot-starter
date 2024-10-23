@@ -39,7 +39,7 @@
     </changeSet>
     <changeSet id="3" author="alex.johnson">
       <createTable tableName="growth_plan">
-        <column name="id" type="VARCHAR(255)">
+        <column name="growth_plan_id" type="BIGINT" autoIncrement="true">
           <constraints primaryKey="true" nullable="false"/>
         </column>
         <column name="result" type="VARCHAR(255)">
@@ -70,5 +70,18 @@
           <constraints nullable="true"/>
         </column>
       </createTable>
+    </changeSet>
+<changeSet author="alex.johnson" id="load data for growth plan">
+      <loadData file="classpath:/db/growthplan.csv" tableName="growth_plan" separator="," nullValue="">
+        <column name="result" />
+        <column name="opportunity" />
+        <column name="next_step" />
+        <column name="growth_assessment" />
+        <column name="goal" />
+        <column name="start_date" type="DATE" />
+        <column name="status" />
+        <column name="age" type="INT"/>
+        <column name="notes" />
+      </loadData>
     </changeSet>
 </databaseChangeLog>
