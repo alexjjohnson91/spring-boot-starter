@@ -15,7 +15,7 @@ import lombok.ToString;
 @Table(name = "growth_plan")
 public class GrowthPlan {
   @Id
-  private long growthPlanId;
+  private Long growthPlanId;
 
   private String result;
   private String opportunity;
