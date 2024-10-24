@@ -21,6 +21,6 @@ public class GrowthTraitController {
   @GetMapping("/growth-traits/{id}")
   GrowthTrait one(@PathVariable Long id) {
     return growthTraitRepository.findById(id).orElseThrow(
-        () -> new GrowthTraitNotFoundException(id));
+        () -> new GrowthTraitIdNotFoundException(id));
   }
 }
