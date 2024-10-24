@@ -93,6 +93,7 @@
     <changeSet author="alex.johnson" id="update age to calculate from start_date">
       <update tableName="growth_trait">
         <column name="age" valueComputed="DATEDIFF('DAY', start_date, NOW())" />
+        <column name="updated_at" valueComputed="NOW()"/>
       </update>
     </changeSet>
 </databaseChangeLog>
