@@ -38,8 +38,8 @@
         </insert>
     </changeSet>
     <changeSet id="3" author="alex.johnson">
-      <createTable tableName="growth_plan">
-        <column name="growth_plan_id" type="BIGINT" autoIncrement="true">
+      <createTable tableName="growth_trait">
+        <column name="growth_trait_id" type="BIGINT" autoIncrement="true">
           <constraints primaryKey="true" nullable="false"/>
         </column>
         <column name="result" type="VARCHAR(255)">
@@ -71,8 +71,8 @@
         </column>
       </createTable>
     </changeSet>
-<changeSet author="alex.johnson" id="load data for growth plan">
-      <loadData file="classpath:/db/growthplan.csv" tableName="growth_plan" separator="," nullValue="">
+<changeSet author="alex.johnson" id="load data for growth trait">
+      <loadData file="classpath:/db/growthtrait.csv" tableName="growth_trait" separator="," nullValue="">
         <column name="result" />
         <column name="opportunity" />
         <column name="next_step" />

@@ -12,10 +12,10 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-@Table(name = "growth_plan")
-public class GrowthPlan {
+@Table(name = "growth_trait")
+public class GrowthTrait {
   @Id
-  private Long growthPlanId;
+  private Long growthTraitId;
 
   private String result;
   private String opportunity;
