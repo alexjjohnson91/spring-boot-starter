@@ -71,7 +71,7 @@
         </column>
       </createTable>
     </changeSet>
-<changeSet author="alex.johnson" id="load data for growth trait">
+    <changeSet author="alex.johnson" id="load data for growth trait">
       <loadData file="classpath:/db/growthtrait.csv" tableName="growth_trait" separator="," nullValue="">
         <column name="result" />
         <column name="opportunity" />
