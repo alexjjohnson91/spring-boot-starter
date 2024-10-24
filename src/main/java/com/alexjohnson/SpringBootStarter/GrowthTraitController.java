@@ -23,4 +23,10 @@ public class GrowthTraitController {
     return growthTraitRepository.findById(id).orElseThrow(
         () -> new GrowthTraitIdNotFoundException(id));
   }
+  @GetMapping(path = "/growth-traits", params = {"status"})
+  List<GrowthTrait> getGrowthTraitsByStatus(
+      @RequestParam(name = "status", required = true) String status) {
+    return growthTraitRepository.findByStatus(status).orElseThrow(
+        () -> new GrowthTraitStatusNotFoundException(status));
+  }
 }
