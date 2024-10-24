@@ -4,7 +4,7 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,8 +18,8 @@ public class GrowthTraitController {
     return growthTraitRepository.findAll();
   }
 
-  @GetMapping("/growth-traits/{id}")
-  GrowthTrait one(@PathVariable Long id) {
+  @GetMapping(path = "/growth-traits", params = {"id"})
+  GrowthTrait one(@RequestParam(name = "id", required = true) Long id) {
     return growthTraitRepository.findById(id).orElseThrow(
         () -> new GrowthTraitIdNotFoundException(id));
   }
