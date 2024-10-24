@@ -84,4 +84,10 @@
         <column name="notes" />
       </loadData>
     </changeSet>
+    <changeSet author="alex.johnson" id="add created_at and updated_at columns">
+      <addColumn tableName="growth_trait">
+        <column name="created_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
+        <column name="updated_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
+      </addColumn>
+    </changeSet>
 </databaseChangeLog>

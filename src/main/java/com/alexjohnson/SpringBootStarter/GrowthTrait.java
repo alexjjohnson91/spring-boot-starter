@@ -7,6 +7,8 @@ import java.util.Date;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
 
 @Entity
 @ToString
@@ -26,4 +28,10 @@ public class GrowthTrait {
   private String status;
   private int age;
   private String notes;
+
+  @CreatedDate
+  private Date createdAt;
+
+  @LastModifiedBy
+  private Date updatedAt;
 }
