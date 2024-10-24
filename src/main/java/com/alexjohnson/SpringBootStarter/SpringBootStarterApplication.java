@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @Slf4j
 public class SpringBootStarterApplication {
-
   public static void main(String[] args) {
     SpringApplication.run(SpringBootStarterApplication.class, args);
-    log.info("Hello Spring Boot!");
   }
 }
