@@ -16,8 +16,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 @Setter
 @Table(name = "growth_trait")
 public class GrowthTrait {
-  @Id
-  private Long growthTraitId;
+  @Id private Long growthTraitId;
 
   private String result;
   private String opportunity;
@@ -28,10 +27,9 @@ public class GrowthTrait {
   private String status;
   private int age;
   private String notes;
+  private String traitType;
 
-  @CreatedDate
-  private Date createdAt;
+  @CreatedDate private Date createdAt;
 
-  @LastModifiedBy
-  private Date updatedAt;
+  @LastModifiedBy private Date updatedAt;
 }
