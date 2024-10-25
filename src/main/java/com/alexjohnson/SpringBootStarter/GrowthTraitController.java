@@ -37,4 +37,12 @@ public class GrowthTraitController {
     return growthTraitRepository.findByTraitType(trait_type)
         .orElseThrow(() -> new GrowthTraitTypeNotFoundException(trait_type));
   }
+
+  @GetMapping(path = "/growth-traits", params = { "trait_type", "status" })
+  List<GrowthTrait> getGrowthTraitsByTraitTypeAndStatus(
+      @RequestParam(name = "trait_type", required = true) String trait_type,
+      @RequestParam(name = "status", required = true) String status) {
+    return growthTraitRepository.findByTraitTypeAndStatus(trait_type, status)
+        .orElseThrow(() -> new GrowthTraitTypeNotFoundException(trait_type));
+  }
 }

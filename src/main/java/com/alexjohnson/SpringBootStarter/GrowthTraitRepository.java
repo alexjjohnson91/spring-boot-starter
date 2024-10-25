@@ -22,4 +22,12 @@ public interface GrowthTraitRepository
         WHERE TRAIT_TYPE = :type;
       """, nativeQuery = true)
   Optional<List<GrowthTrait>> findByTraitType(String type);
+
+  @Query(value = """
+        SELECT *
+        FROM GROWTH_TRAIT
+        WHERE TRAIT_TYPE = :type
+        AND STATUS = :status;
+      """, nativeQuery = true)
+  Optional<List<GrowthTrait>> findByTraitTypeAndStatus(String type, String status);
 }
