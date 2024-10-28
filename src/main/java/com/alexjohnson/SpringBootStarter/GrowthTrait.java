@@ -1,6 +1,9 @@
 package com.alexjohnson.SpringBootStarter;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.util.Date;
@@ -16,6 +19,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 @Setter
 @Table(name = "growth_trait")
 public class GrowthTrait {
+
   @Id private Long growthTraitId;
 
   private String result;
@@ -24,7 +28,9 @@ public class GrowthTrait {
   private String growthAssessment;
   private String goal;
   private Date startDate;
-  private String status;
+
+  @Enumerated(EnumType.STRING) private Status status;
+
   private int age;
   private String notes;
   private String traitType;

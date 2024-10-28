@@ -12,37 +12,36 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class GrowthTraitController {
   private final GrowthTraitRepository growthTraitRepository;
+  private final GrowthTraitService growthTraitService;
 
   @GetMapping("/growth-traits")
   List<GrowthTrait> all() {
     return growthTraitRepository.findAll();
   }
 
-  @GetMapping(path = "/growth-traits", params = { "id" })
-  GrowthTrait one(@RequestParam(name = "id", required = true) Long id) {
+  @GetMapping(path = "/growth-traits", params = {"id"})
+  GrowthTrait one(@RequestParam(name = "id") Long id) {
     return growthTraitRepository.findById(id).orElseThrow(
         () -> new GrowthTraitIdNotFoundException(id));
   }
 
-  @GetMapping(path = "/growth-traits", params = { "status" })
-  List<GrowthTrait> getGrowthTraitsByStatus(
-      @RequestParam(name = "status", required = true) String status) {
-    return growthTraitRepository.findByStatus(status).orElseThrow(
-        () -> new GrowthTraitStatusNotFoundException(status));
+  @GetMapping(path = "/growth-traits", params = {"status"})
+  List<GrowthTrait>
+  getGrowthTraitsByStatus(@RequestParam(name = "status") Status status) {
+    return growthTraitService.getGrowthTraitsByStatus(status);
   }
 
-  @GetMapping(path = "/growth-traits", params = { "trait_type" })
+  @GetMapping(path = "/growth-traits", params = {"trait_type"})
   List<GrowthTrait> getGrowthTraitsByTraitType(
-      @RequestParam(name = "trait_type", required = true) String trait_type) {
+      @RequestParam(name = "trait_type") String trait_type) {
     return growthTraitRepository.findByTraitType(trait_type)
         .orElseThrow(() -> new GrowthTraitTypeNotFoundException(trait_type));
   }
 
-  @GetMapping(path = "/growth-traits", params = { "trait_type", "status" })
+  @GetMapping(path = "/growth-traits", params = {"trait_type", "status"})
   List<GrowthTrait> getGrowthTraitsByTraitTypeAndStatus(
-      @RequestParam(name = "trait_type", required = true) String trait_type,
-      @RequestParam(name = "status", required = true) String status) {
-    return growthTraitRepository.findByTraitTypeAndStatus(trait_type, status)
-        .orElseThrow(() -> new GrowthTraitTypeNotFoundException(trait_type));
+      @RequestParam(name = "trait_type") String trait_type,
+      @RequestParam(name = "status") Status status) {
+    return growthTraitRepository.findByTraitTypeAndStatus(trait_type, status);
   }
 }
