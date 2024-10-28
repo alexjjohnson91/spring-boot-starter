@@ -62,7 +62,7 @@
     </changeSet>
     <changeSet author="alex.johnson" id="update age to calculate from start_date">
       <update tableName="growth_trait">
-        <column name="age" valueComputed="DATE_PART('DAY', start_date - NOW())" />
+        <column name="age" valueComputed="DATE_PART('DAY', NOW() - start_date)" />
         <column name="updated_at" valueComputed="NOW()"/>
       </update>
     </changeSet>
