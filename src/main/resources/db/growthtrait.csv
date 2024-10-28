@@ -1,52 +1,52 @@
 result,opportunity,next_step,growth_assessment,goal,start_date,status,age,notes,trait_type
-,,,Available and patient with non-technical peers/stakeholders ,,2024-10-09,New,14,,SOFT
-,,,Available and patient with technical peers/stakeholders ,,2024-10-09,New,14,,SOFT
-,,,Makes changes based on feedback,,2024-10-09,New,14,,SOFT
-,,,Open to feedback,,2024-10-09,New,14,,SOFT
-,,,Handles roadblocks with care and sensitivity,,2024-10-09,New,14,,SOFT
-,,,Valuing the expertise of others (listen and modify behavior),,2024-10-09,New,14,,SOFT
-,,,Communicates in the correct manner and setting (Does it need to be said? Does it need to be said by me? Does it need to be said right now?),,2024-10-09,New,14,,SOFT
-,,,Express disagreement within a healthy conflict framework ,,2024-10-09,New,14,,SOFT
-,,,Handles various personalities with care and sensitivity ,,2024-10-09,New,14,,SOFT
-,,,Pulls ideas out of others ,,2024-10-09,New,14,,SOFT
-,,,"Elevation of problem, co-authoring of the solution for issues",,2024-10-09,New,14,,SOFT
-,,,Customer focused mindset ,,2024-10-09,New,14,,SOFT
-,,,Considering technical impact during the Discovery Process ,,2024-10-09,New,14,,SOFT
-,,,Considering Customer value during the Discovery Process ,,2024-10-09,New,14,,SOFT
-,,,"Have strong opinions, loosly held",,2024-10-09,New,14,,SOFT
-,,,Demonstrates emotional courage ,,2024-10-09,New,14,,SOFT
-,,,Actively develops their personal brand,,2024-10-09,New,14,,SOFT
-,,,Missional,,2024-10-09,New,14,,SOFT
-,,,Demonstrate the ability to Disagree and Commit ,,2024-10-09,New,14,,SOFT
-,,,Takes personal responsibility ,,2024-10-09,New,14,,SOFT
-,,,Engages socially with my team ,,2024-10-09,New,14,,SOFT
-,,,Connects with those seeking help within a reasonable timeframe,,2024-10-09,New,14,,SOFT
-,,,Actively Building Trust with Team ,,2024-10-09,New,14,,SOFT
-,,,Actively Building Trust with Other Disciplines ,,2024-10-09,New,14,,SOFT
-,,,Wins and loses as a team,,2024-10-09,New,14,,SOFT
-,,,Baseline Skill In Coding: Can build/compile in a any language (Baseline code execution skills),,2024-10-09,New,14,,HARD
-,,,Foundational (Working) Competence in a language,,2024-10-09,Planned,14,,HARD
-,,,Confident in making changes in an existing codebase /feature or other's code,,2024-10-09,New,14,,HARD
-,,,Confident to begin a green field codebase/feature. Knows how to start from New.,,2024-10-09,New,14,,HARD
-,,,Foundational Competence more than one Language,,2024-10-09,New,14,,HARD
-,,,"Deep understanding of Primary Language (Performance Concerns, Best Practices, Which to Choose and Why)",,2024-10-09,New,14,,HARD
-,,,Can understand and use common design patterns,,2024-10-09,New,14,,HARD
-,,,Refactoring/De-Duping,,2024-10-09,New,14,,HARD
-,,,"Create Usable technical documentation for you, your team, or someone with context to understand",,2024-10-09,New,14,,HARD
-,,,"Consider usability of the product, and collaborates with appropriate disciplines",,2024-10-09,New,14,,HARD
-,,,Fluency in a test framework and test pyramid,,2024-10-09,New,14,,HARD
-,,,"Happy Path Testing, Exception Handling, Downstream Impact (Not necessarily unit testing)",,2024-10-09,New,14,,HARD
-,,,"Understands the Audience of their Code is other engineers not the computer, and how you code reflects that understanding",,2024-10-09,New,14,,HARD
-,,,"Consider unit tests for all code, implement and maintains appropriately",,2024-10-09,New,14,,HARD
-,,,Consider integration points and avoids fragility,,2024-10-09,New,14,,HARD
-,,,Consider SEO impact,,2024-10-09,New,14,,HARD
-,,,Mentoring other Engineers in areas you are Strong in,,2024-10-09,New,14,,HARD
-,,,Finding Technology Industry trends and bring the knowledge back into the team,,2024-10-09,New,14,,HARD
-,,,Creates actionable alerts easily consumed by others,,2024-10-09,New,14,,HARD
-,,,Owns alerts and response (Can diagnose an application issue without reaching out to Systems Engineering),,2024-10-09,New,14,,HARD
-,,,Log appropriate code diagnostic information,,2024-10-09,New,14,,HARD
-,,,Is able to relate work being executed on to a business problem ,,2024-10-09,New,14,,HARD
-,,,Removes own blockers due to lack of understanding of the work or language,,2024-10-09,New,14,,HARD
-,,,Pull cards and work them with self-sufficiency,,2024-10-09,New,14,,HARD
-,,,Is not consistently blocked,,2024-10-09,New,14,,HARD
-,,,Reactive Tech Debt Management,,2024-10-09,New,14,,HARD
+,,,Available and patient with non-technical peers/stakeholders ,,2024-10-09,NEW,14,,SOFT
+,,,Available and patient with technical peers/stakeholders ,,2024-10-09,NEW,14,,SOFT
+,,,Makes changes based on feedback,,2024-10-09,NEW,14,,SOFT
+,,,Open to feedback,,2024-10-09,NEW,14,,SOFT
+,,,Handles roadblocks with care and sensitivity,,2024-10-09,NEW,14,,SOFT
+,,,Valuing the expertise of others (listen and modify behavior),,2024-10-09,NEW,14,,SOFT
+,,,Communicates in the correct manner and setting (Does it need to be said? Does it need to be said by me? Does it need to be said right now?),,2024-10-09,NEW,14,,SOFT
+,,,Express disagreement within a healthy conflict framework ,,2024-10-09,NEW,14,,SOFT
+,,,Handles various personalities with care and sensitivity ,,2024-10-09,NEW,14,,SOFT
+,,,Pulls ideas out of others ,,2024-10-09,NEW,14,,SOFT
+,,,"Elevation of problem, co-authoring of the solution for issues",,2024-10-09,NEW,14,,SOFT
+,,,Customer focused mindset ,,2024-10-09,NEW,14,,SOFT
+,,,Considering technical impact during the Discovery Process ,,2024-10-09,NEW,14,,SOFT
+,,,Considering Customer value during the Discovery Process ,,2024-10-09,NEW,14,,SOFT
+,,,"Have strong opinions, loosly held",,2024-10-09,NEW,14,,SOFT
+,,,Demonstrates emotional courage ,,2024-10-09,NEW,14,,SOFT
+,,,Actively develops their personal brand,,2024-10-09,NEW,14,,SOFT
+,,,Missional,,2024-10-09,NEW,14,,SOFT
+,,,Demonstrate the ability to Disagree and Commit ,,2024-10-09,NEW,14,,SOFT
+,,,Takes personal responsibility ,,2024-10-09,NEW,14,,SOFT
+,,,Engages socially with my team ,,2024-10-09,NEW,14,,SOFT
+,,,Connects with those seeking help within a reasonable timeframe,,2024-10-09,NEW,14,,SOFT
+,,,Actively Building Trust with Team ,,2024-10-09,NEW,14,,SOFT
+,,,Actively Building Trust with Other Disciplines ,,2024-10-09,NEW,14,,SOFT
+,,,Wins and loses as a team,,2024-10-09,NEW,14,,SOFT
+,,,Baseline Skill In Coding: Can build/compile in a any language (Baseline code execution skills),,2024-10-09,NEW,14,,HARD
+,,,Foundational (Working) Competence in a language,,2024-10-09,PLANNED,14,,HARD
+,,,Confident in making changes in an existing codebase /feature or other's code,,2024-10-09,NEW,14,,HARD
+,,,Confident to begin a green field codebase/feature. Knows how to start from NEW.,,2024-10-09,NEW,14,,HARD
+,,,Foundational Competence more than one Language,,2024-10-09,NEW,14,,HARD
+,,,"Deep understanding of Primary Language (Performance Concerns, Best Practices, Which to Choose and Why)",,2024-10-09,NEW,14,,HARD
+,,,Can understand and use common design patterns,,2024-10-09,NEW,14,,HARD
+,,,Refactoring/De-Duping,,2024-10-09,NEW,14,,HARD
+,,,"Create Usable technical documentation for you, your team, or someone with context to understand",,2024-10-09,NEW,14,,HARD
+,,,"Consider usability of the product, and collaborates with appropriate disciplines",,2024-10-09,NEW,14,,HARD
+,,,Fluency in a test framework and test pyramid,,2024-10-09,NEW,14,,HARD
+,,,"Happy Path Testing, Exception Handling, Downstream Impact (Not necessarily unit testing)",,2024-10-09,NEW,14,,HARD
+,,,"Understands the Audience of their Code is other engineers not the computer, and how you code reflects that understanding",,2024-10-09,NEW,14,,HARD
+,,,"Consider unit tests for all code, implement and maintains appropriately",,2024-10-09,NEW,14,,HARD
+,,,Consider integration points and avoids fragility,,2024-10-09,NEW,14,,HARD
+,,,Consider SEO impact,,2024-10-09,NEW,14,,HARD
+,,,Mentoring other Engineers in areas you are Strong in,,2024-10-09,NEW,14,,HARD
+,,,Finding Technology Industry trends and bring the knowledge back into the team,,2024-10-09,NEW,14,,HARD
+,,,Creates actionable alerts easily consumed by others,,2024-10-09,NEW,14,,HARD
+,,,Owns alerts and response (Can diagnose an application issue without reaching out to Systems Engineering),,2024-10-09,NEW,14,,HARD
+,,,Log appropriate code diagnostic information,,2024-10-09,NEW,14,,HARD
+,,,Is able to relate work being executed on to a business problem ,,2024-10-09,NEW,14,,HARD
+,,,Removes own blockers due to lack of understanding of the work or language,,2024-10-09,NEW,14,,HARD
+,,,Pull cards and work them with self-sufficiency,,2024-10-09,NEW,14,,HARD
+,,,Is not consistently blocked,,2024-10-09,NEW,14,,HARD
+,,,Reactive Tech Debt Management,,2024-10-09,NEW,14,,HARD
