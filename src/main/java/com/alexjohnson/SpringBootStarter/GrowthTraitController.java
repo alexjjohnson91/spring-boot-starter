@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class GrowthTraitController {
   private final GrowthTraitRepository growthTraitRepository;
-  private final GrowthTraitService growthTraitService;
 
   @GetMapping("/growth-traits")
   List<GrowthTrait> all() {
@@ -28,7 +27,8 @@ public class GrowthTraitController {
   @GetMapping(path = "/growth-traits", params = {"status"})
   List<GrowthTrait>
   getGrowthTraitsByStatus(@RequestParam(name = "status") Status status) {
-    return growthTraitService.getGrowthTraitsByStatus(status);
+    return growthTraitRepository.findByStatus(status.toString())
+        .orElseThrow(() -> new GrowthTraitStatusNotFoundException(status));
   }
 
   @GetMapping(path = "/growth-traits", params = {"trait_type"})
@@ -42,6 +42,7 @@ public class GrowthTraitController {
   List<GrowthTrait> getGrowthTraitsByTraitTypeAndStatus(
       @RequestParam(name = "trait_type") String trait_type,
       @RequestParam(name = "status") Status status) {
-    return growthTraitRepository.findByTraitTypeAndStatus(trait_type, status);
+    return growthTraitRepository.findByTraitTypeAndStatus(trait_type,
+                                                          status.toString());
   }
 }

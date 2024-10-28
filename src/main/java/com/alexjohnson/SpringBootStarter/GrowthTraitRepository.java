@@ -30,5 +30,5 @@ public interface GrowthTraitRepository
         WHERE TRAIT_TYPE = :type
         AND STATUS = :status_state;
       """, nativeQuery = true)
-  List<GrowthTrait> findByTraitTypeAndStatus(String type, Status status_state);
+  List<GrowthTrait> findByTraitTypeAndStatus(String type, String status_state);
 }
