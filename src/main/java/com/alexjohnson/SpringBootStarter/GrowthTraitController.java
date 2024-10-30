@@ -56,4 +56,9 @@ public class GrowthTraitController {
   GrowthTrait moveTraitToNextStatus(@PathVariable Long id) {
     return growthTraitService.moveTraitToNextStatus(id);
   }
+
+  @PatchMapping(path = "/growth-traits/{id}/next-rating")
+  GrowthTrait moveTraitToNextRating(@PathVariable Long id) {
+    return growthTraitService.moveTraitToNextRating(id);
+  }
 }

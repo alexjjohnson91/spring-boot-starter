@@ -17,4 +17,12 @@ public class GrowthTraitService {
 
     return growthTraitRepository.save(growthTrait);
   }
+
+  public GrowthTrait moveTraitToNextRating(Long id) {
+    GrowthTrait growthTrait = growthTraitRepository.findById(id).orElseThrow(
+        () -> new GrowthTraitIdNotFoundException(id));
+    growthTrait.setMenteeRating(growthTrait.getMenteeRating().next());
+
+    return growthTraitRepository.save(growthTrait);
+  }
 }
