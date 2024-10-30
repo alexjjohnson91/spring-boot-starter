@@ -1,5 +1,7 @@
 package com.alexjohnson.SpringBootStarter;
 
+import com.alexjohnson.SpringBootStarter.types.Status;
+import com.alexjohnson.SpringBootStarter.types.TraitType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -32,7 +34,8 @@ public class GrowthTrait {
 
   private int age;
   private String notes;
-  private String traitType;
+
+  @Enumerated(EnumType.STRING) private TraitType traitType;
 
   @CreatedDate private Date createdAt;
 
