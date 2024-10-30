@@ -26,30 +26,30 @@ public class GrowthTraitController {
   @GetMapping(path = "/growth-traits", params = {"id"})
   GrowthTrait one(@RequestParam(name = "id") Long id) {
     return growthTraitRepository.findById(id).orElseThrow(
-        () -> new GrowthTraitIdNotFoundException(id));
+        () -> new GrowthTraitNotFoundException());
   }
 
   @GetMapping(path = "/growth-traits", params = {"status"})
   List<GrowthTrait>
   getGrowthTraitsByStatus(@RequestParam(name = "status") Status status) {
     return growthTraitRepository.findByStatus(status.toString())
-        .orElseThrow(() -> new GrowthTraitStatusNotFoundException(status));
+        .orElseThrow(() -> new GrowthTraitNotFoundException());
   }
 
   @GetMapping(path = "/growth-traits", params = {"trait_type"})
   List<GrowthTrait> getGrowthTraitsByTraitType(
       @RequestParam(name = "trait_type") TraitType trait_type) {
     return growthTraitRepository.findByTraitType(trait_type.toString())
-        .orElseThrow(
-            () -> new GrowthTraitTypeNotFoundException(trait_type.toString()));
+        .orElseThrow(() -> new GrowthTraitNotFoundException());
   }
 
   @GetMapping(path = "/growth-traits", params = {"trait_type", "status"})
   List<GrowthTrait> getGrowthTraitsByTraitTypeAndStatus(
       @RequestParam(name = "trait_type") TraitType trait_type,
       @RequestParam(name = "status") Status status) {
-    return growthTraitRepository.findByTraitTypeAndStatus(trait_type.toString(),
-                                                          status.toString());
+    return growthTraitRepository
+        .findByTraitTypeAndStatus(trait_type.toString(), status.toString())
+        .orElseThrow(() -> new GrowthTraitNotFoundException());
   }
 
   @PatchMapping(path = "/growth-traits/{id}/next-status")
