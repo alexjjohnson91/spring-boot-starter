@@ -1,4 +1,4 @@
-package com.alexjohnson.SpringBootStarter;
+package com.alexjohnson.SpringBootStarter.types;
 
 public enum Status {
   NEW,
