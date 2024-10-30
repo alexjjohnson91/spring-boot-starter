@@ -39,6 +39,15 @@
         <column name="trait_type" type="VARCHAR(255)">
           <constraints nullable="true"/>
         </column>
+        <column name="mentee_rating" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="mentor_rating" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
+        <column name="engineer_rating" type="VARCHAR(255)">
+          <constraints nullable="true"/>
+        </column>
       </createTable>
     </changeSet>
     <changeSet author="alex.johnson" id="load data for growth trait">
@@ -52,6 +61,9 @@
         <column name="status" />
         <column name="age" type="INT"/>
         <column name="notes" />
+        <column name="mentee_rating" />
+        <column name="mentor_rating" />
+        <column name="engineer_rating" />
       </loadData>
     </changeSet>
     <changeSet author="alex.johnson" id="add created_at and updated_at columns">

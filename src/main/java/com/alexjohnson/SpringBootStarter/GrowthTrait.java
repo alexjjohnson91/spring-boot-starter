@@ -1,6 +1,7 @@
 package com.alexjohnson.SpringBootStarter;
 
 import com.alexjohnson.SpringBootStarter.types.Status;
+import com.alexjohnson.SpringBootStarter.types.TraitRate;
 import com.alexjohnson.SpringBootStarter.types.TraitType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -36,6 +37,10 @@ public class GrowthTrait {
   private String notes;
 
   @Enumerated(EnumType.STRING) private TraitType traitType;
+
+  @Enumerated(EnumType.STRING) private TraitRate menteeRating;
+  @Enumerated(EnumType.STRING) private TraitRate mentorRating;
+  @Enumerated(EnumType.STRING) private TraitRate engineerRating;
 
   @CreatedDate private Date createdAt;
 
