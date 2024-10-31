@@ -40,7 +40,6 @@ public class GrowthTraitController {
         mentor_rating == null && engineer_rating == null) {
       return growthTraitRepository.findAll();
     }
-
     log.info("calling service");
 
     return growthTraitService.findByGrowthTraitParameters(
