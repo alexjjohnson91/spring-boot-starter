@@ -13,22 +13,13 @@ public interface GrowthTraitRepository
   @Query(value = """
         SELECT *
         FROM GROWTH_TRAIT
-        WHERE STATUS = :status_state;
+        WHERE
+          TRAIT_TYPE = COALESCE(:type, TRAIT_TYPE) AND
+          STATUS = COALESCE(:status_state, STATUS) AND
+          MENTEE_RATING = COALESCE(:mentee_rating_string, MENTEE_RATING) AND
+          MENTOR_RATING = COALESCE(:mentor_rating_string, MENTOR_RATING) AND
+          ENGINEER_RATING = COALESCE(:engineer_rating_string, ENGINEER_RATING);
       """, nativeQuery = true)
-  Optional<List<GrowthTrait>> findByStatus(String status_state);
-
-  @Query(value = """
-        SELECT *
-        FROM GROWTH_TRAIT
-        WHERE TRAIT_TYPE = :type;
-      """, nativeQuery = true)
-  Optional<List<GrowthTrait>> findByTraitType(String type);
-
-  @Query(value = """
-        SELECT *
-        FROM GROWTH_TRAIT
-        WHERE TRAIT_TYPE = :type
-        AND STATUS = :status_state;
-      """, nativeQuery = true)
-  Optional<List<GrowthTrait>> findByTraitTypeAndStatus(String type, String status_state);
+  Optional<List<GrowthTrait>> findByTraitTypeOrStatusOrMenteeRatingOrMentorRatingOrEngineerRating(String type,
+      String status_state, String mentee_rating_string, String mentor_rating_string, String engineer_rating_string);
 }

@@ -1,6 +1,7 @@
 package com.alexjohnson.SpringBootStarter;
 
 import com.alexjohnson.SpringBootStarter.types.Status;
+import com.alexjohnson.SpringBootStarter.types.TraitRate;
 import com.alexjohnson.SpringBootStarter.types.TraitType;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -18,38 +19,36 @@ public class GrowthTraitController {
   private final GrowthTraitRepository growthTraitRepository;
   private final GrowthTraitService growthTraitService;
 
-  @GetMapping("/growth-traits")
-  List<GrowthTrait> all() {
-    return growthTraitRepository.findAll();
-  }
-
   @GetMapping(path = "/growth-traits", params = {"id"})
   GrowthTrait one(@RequestParam(name = "id") Long id) {
     return growthTraitRepository.findById(id).orElseThrow(
         () -> new GrowthTraitNotFoundException());
   }
 
-  @GetMapping(path = "/growth-traits", params = {"status"})
-  List<GrowthTrait>
-  getGrowthTraitsByStatus(@RequestParam(name = "status") Status status) {
-    return growthTraitRepository.findByStatus(status.toString())
-        .orElseThrow(() -> new GrowthTraitNotFoundException());
-  }
+  @GetMapping(path = "/growth-traits")
+  List<GrowthTrait> getGrowthTraitsByRatings(
+      @RequestParam(name = "trait_type", required = false) TraitType trait_type,
+      @RequestParam(name = "status", required = false) Status status,
+      @RequestParam(name = "mentee_rating",
+                    required = false) TraitRate mentee_rating,
+      @RequestParam(name = "mentor_rating",
+                    required = false) TraitRate mentor_rating,
+      @RequestParam(name = "engineer_rating",
+                    required = false) TraitRate engineer_rating) {
+    log.info("controller called");
+    if (trait_type == null && status == null && mentee_rating == null &&
+        mentor_rating == null && engineer_rating == null) {
+      return growthTraitRepository.findAll();
+    }
 
-  @GetMapping(path = "/growth-traits", params = {"trait_type"})
-  List<GrowthTrait> getGrowthTraitsByTraitType(
-      @RequestParam(name = "trait_type") TraitType trait_type) {
-    return growthTraitRepository.findByTraitType(trait_type.toString())
-        .orElseThrow(() -> new GrowthTraitNotFoundException());
-  }
+    log.info("calling service");
 
-  @GetMapping(path = "/growth-traits", params = {"trait_type", "status"})
-  List<GrowthTrait> getGrowthTraitsByTraitTypeAndStatus(
-      @RequestParam(name = "trait_type") TraitType trait_type,
-      @RequestParam(name = "status") Status status) {
-    return growthTraitRepository
-        .findByTraitTypeAndStatus(trait_type.toString(), status.toString())
-        .orElseThrow(() -> new GrowthTraitNotFoundException());
+    return growthTraitService.findByGrowthTraitParameters(
+        trait_type != null ? trait_type.toString() : null,
+        status != null ? status.toString() : null,
+        mentee_rating != null ? mentee_rating.toString() : null,
+        mentor_rating != null ? mentor_rating.toString() : null,
+        engineer_rating != null ? engineer_rating.toString() : null);
   }
 
   @PatchMapping(path = "/growth-traits/{id}/next-status")
