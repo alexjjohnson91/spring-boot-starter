@@ -56,4 +56,12 @@ public class GrowthTraitService {
 
     return growthTraitRepository.save(growthTrait);
   }
+
+  public GrowthTrait moveTraitToPrevStatus(Long id) {
+    GrowthTrait growthTrait = growthTraitRepository.findById(id).orElseThrow(
+        () -> new GrowthTraitNotFoundException());
+    growthTrait.setStatus(growthTrait.getStatus().prev());
+
+    return growthTraitRepository.save(growthTrait);
+  }
 }
