@@ -1,11 +1,11 @@
 package com.alexjohnson.SpringBootStarter;
 
-import com.alexjohnson.SpringBootStarter.types.Status;
-import com.alexjohnson.SpringBootStarter.types.TraitRate;
-import com.alexjohnson.SpringBootStarter.types.TraitType;
+import com.alexjohnson.SpringBootStarter.enums.Status;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.util.Date;
@@ -22,12 +22,14 @@ import org.springframework.data.annotation.LastModifiedBy;
 @Table(name = "growth_trait")
 public class GrowthTrait {
 
-  @Id private Long growthTraitId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long growthTraitId;
+  private Long growthAssessmentId;
 
   private String result;
   private String opportunity;
   private String nextStep;
-  private String growthAssessment;
   private String goal;
   private Date startDate;
 
@@ -36,13 +38,6 @@ public class GrowthTrait {
   private int age;
   private String notes;
 
-  @Enumerated(EnumType.STRING) private TraitType traitType;
-
-  @Enumerated(EnumType.STRING) private TraitRate menteeRating;
-  @Enumerated(EnumType.STRING) private TraitRate mentorRating;
-  @Enumerated(EnumType.STRING) private TraitRate engineerRating;
-
   @CreatedDate private Date createdAt;
-
   @LastModifiedBy private Date updatedAt;
 }
