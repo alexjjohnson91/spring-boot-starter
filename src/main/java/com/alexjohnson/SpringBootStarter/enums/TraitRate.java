@@ -1,4 +1,4 @@
-package com.alexjohnson.SpringBootStarter.types;
+package com.alexjohnson.SpringBootStarter.enums;
 
 public enum TraitRate {
   UNPRACTICED,
