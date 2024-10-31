@@ -25,7 +25,7 @@ public class GrowthTraitController {
     growthTraitService.saveAllGrowthTraits();
   }
 
-  @GetMapping(path = "/growth-traits", params = {"id"})
+  @GetMapping(path = "/growth-traits", params = { "id" })
   GrowthTrait one(@RequestParam(name = "id") Long id) {
     return growthTraitRepository.findById(id).orElseThrow(
         () -> new GrowthTraitNotFoundException());
@@ -35,12 +35,9 @@ public class GrowthTraitController {
   List<GrowthPlanTrait> getGrowthTraitsByRatings(
       @RequestParam(name = "trait_type", required = false) TraitType trait_type,
       @RequestParam(name = "status", required = false) Status status,
-      @RequestParam(name = "mentee_rating",
-                    required = false) TraitRate mentee_rating,
-      @RequestParam(name = "mentor_rating",
-                    required = false) TraitRate mentor_rating,
-      @RequestParam(name = "engineer_rating",
-                    required = false) TraitRate engineer_rating) {
+      @RequestParam(name = "mentee_rating", required = false) TraitRate mentee_rating,
+      @RequestParam(name = "mentor_rating", required = false) TraitRate mentor_rating,
+      @RequestParam(name = "engineer_rating", required = false) TraitRate engineer_rating) {
     log.info("controller called");
     if (trait_type == null && status == null && mentee_rating == null &&
         mentor_rating == null && engineer_rating == null) {

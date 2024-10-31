@@ -16,8 +16,7 @@ public class GrowthTraitService {
   private final GrowthAssessmentRepository growthAssessmentRepository;
 
   public void saveAllGrowthTraits() {
-    List<GrowthAssessment> growthAssessmentTraits =
-        growthAssessmentRepository.findAll();
+    List<GrowthAssessment> growthAssessmentTraits = growthAssessmentRepository.findAll();
     if (growthAssessmentTraits.size() == 0) {
       log.error("no growth assessment traits");
       return;
@@ -41,9 +40,8 @@ public class GrowthTraitService {
     }
   }
 
-  public List<GrowthPlanTrait>
-  findByGrowthTraitParameters(String trait, String status, String mentee_rating,
-                              String mentor_rating, String engineer_rating) {
+  public List<GrowthPlanTrait> findByGrowthTraitParameters(String trait, String status, String mentee_rating,
+      String mentor_rating, String engineer_rating) {
     return growthTraitRepository
         .findByTraitTypeOrStatusOrMenteeRatingOrMentorRatingOrEngineerRating(
             trait, status, mentee_rating, mentor_rating, engineer_rating);
