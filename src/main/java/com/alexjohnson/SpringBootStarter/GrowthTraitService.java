@@ -14,11 +14,6 @@ public class GrowthTraitService {
   public List<GrowthTrait>
   findByGrowthTraitParameters(String trait, String status, String mentee_rating,
                               String mentor_rating, String engineer_rating) {
-    // log.info("Trait Type: ", trait.toString());
-    // log.info("Status: ", status.toString());
-    // log.info("Mentee Rating: ", mentee_rating.toString());
-    // log.info("Mentor Rating: ", mentor_rating.toString());
-    // log.info("Engineer Rating: ", engineer_rating.toString());
     log.warn("SERVICE");
     return growthTraitRepository
         .findByTraitTypeOrStatusOrMenteeRatingOrMentorRatingOrEngineerRating(
