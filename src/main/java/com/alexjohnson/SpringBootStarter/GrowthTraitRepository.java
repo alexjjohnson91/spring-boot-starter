@@ -8,6 +8,8 @@ import org.springframework.data.repository.query.Param;
 
 public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
 
+  Optional<GrowthTrait> findById(Long id);
+
   @Query(value = """
         SELECT
           A.GROWTH_ASSESSMENT_ID,
