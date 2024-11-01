@@ -6,6 +6,10 @@ import com.alexjohnson.SpringBootStarter.enums.TraitType;
 import org.springframework.beans.factory.annotation.Value;
 
 public interface GrowthPlanTrait {
+  @Value("#{target.growthAssessmentId}") String getGrowthAssessmentId();
+
+  @Value("#{target.growthTraitId}") String getGrowthTraitId();
+
   @Value("#{target.detail}") String getDetail();
 
   @Value("#{target.trait_type}") TraitType getTraitType();

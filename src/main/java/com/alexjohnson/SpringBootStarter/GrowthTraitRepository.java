@@ -10,6 +10,8 @@ public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
 
   @Query(value = """
         SELECT
+          A.GROWTH_ASSESSMENT_ID,
+          B.GROWTH_TRAIT_ID,
           A.DETAIL,
           A.TRAIT_TYPE,
           A.MENTEE_RATING,
@@ -25,6 +27,8 @@ public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
 
   @Query(value = """
         SELECT
+          A.GROWTH_ASSESSMENT_ID,
+          B.GROWTH_TRAIT_ID,
           A.DETAIL,
           A.TRAIT_TYPE,
           A.MENTEE_RATING,
