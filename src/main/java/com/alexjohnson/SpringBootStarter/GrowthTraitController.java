@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @Slf4j
 public class GrowthTraitController {
-  private final GrowthTraitRepository growthTraitRepository;
   private final GrowthTraitService growthTraitService;
 
   @PostMapping(path = "/growth-traits/save-all")
@@ -27,7 +26,7 @@ public class GrowthTraitController {
 
   @GetMapping(path = "/growth-traits/{id}")
   GrowthTraitData getByGrowthTraitId(@PathVariable Long id) {
-    return growthTraitRepository.findByGrowthTraitId(id);
+    return growthTraitService.getByGrowthTraitId(id);
   }
 
   @GetMapping(path = "/growth-traits")
@@ -40,13 +39,6 @@ public class GrowthTraitController {
                     required = false) TraitRate mentor_rating,
       @RequestParam(name = "engineer_rating",
                     required = false) TraitRate engineer_rating) {
-    log.info("controller called");
-    if (trait_type == null && status == null && mentee_rating == null &&
-        mentor_rating == null && engineer_rating == null) {
-      return growthTraitRepository.findAll();
-    }
-    log.info("calling service");
-
     return growthTraitService.findByGrowthTraitParameters(
         trait_type != null ? trait_type.toString() : null,
         status != null ? status.toString() : null,
