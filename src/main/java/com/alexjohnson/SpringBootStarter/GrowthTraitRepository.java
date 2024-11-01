@@ -23,8 +23,6 @@ public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
       """, nativeQuery = true)
   List<GrowthPlanTrait> findAll();
 
-  Optional<GrowthTrait> findById(Long id);
-
   @Query(value = """
         SELECT
           A.GROWTH_ASSESSMENT_ID,
@@ -50,6 +48,26 @@ public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
       @Param("mentee_rating_string") String mentee_rating_string,
       @Param("mentor_rating_string") String mentor_rating_string,
       @Param("engineer_rating_string") String engineer_rating_string);
+
+  @Query(value = """
+            SELECT
+              B.DETAIL,
+              B.TRAIT_TYPE,
+              A.RESULT,
+              A.OPPORTUNITY,
+              A.NEXT_STEP,
+              A.GOAL,
+              A.START_DATE,
+              A.STATUS,
+              A.AGE,
+              A.NOTES
+            FROM GROWTH_TRAIT A
+            JOIN GROWTH_ASSESSMENT B
+              ON A.GROWTH_ASSESSMENT_ID = B.GROWTH_ASSESSMENT_ID
+            WHERE
+              A.GROWTH_TRAIT_ID = :id;
+      """, nativeQuery = true)
+  GrowthTraitData findByGrowthTraitId(Long id);
 
   GrowthTrait save(GrowthTrait growthTrait);
 }
