@@ -6,19 +6,27 @@ import com.alexjohnson.SpringBootStarter.enums.TraitType;
 import org.springframework.beans.factory.annotation.Value;
 
 public interface GrowthPlanTrait {
-  @Value("#{target.growthAssessmentId}") String getGrowthAssessmentId();
+    @Value("#{target.growthAssessmentId}")
+    String getGrowthAssessmentId();
 
-  @Value("#{target.growthTraitId}") String getGrowthTraitId();
+    @Value("#{target.growthTraitId}")
+    String getGrowthTraitId();
 
-  @Value("#{target.detail}") String getDetail();
+    @Value("#{target.detail}")
+    String getDetail();
 
-  @Value("#{target.trait_type}") TraitType getTraitType();
+    @Value("#{target.trait_type}")
+    TraitType getTraitType();
 
-  @Value("#{target.menteeRating}") TraitRate getMenteeRating();
+    @Value("#{target.menteeRating}")
+    TraitRate getMenteeRating();
 
-  @Value("#{target.mentorRating}") TraitRate getMentorRating();
+    @Value("#{target.mentorRating}")
+    TraitRate getMentorRating();
 
-  @Value("#{target.engineerRating}") TraitRate getEngineerRating();
+    @Value("#{target.engineerRating}")
+    TraitRate getEngineerRating();
 
-  @Value("#{target.status}") Status getStatus();
+    @Value("#{target.status}")
+    Status getStatus();
 }

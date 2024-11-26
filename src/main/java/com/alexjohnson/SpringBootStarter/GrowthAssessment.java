@@ -21,18 +21,28 @@ import org.springframework.data.annotation.LastModifiedBy;
 @Table(name = "growth_assessment")
 public class GrowthAssessment {
 
-  @Id private Long growthAssessmentId;
+    @Id
+    private Long growthAssessmentId;
 
-  private String category;
-  private String attribute;
-  private String detail;
+    private String category;
+    private String attribute;
+    private String detail;
 
-  @Enumerated(EnumType.STRING) private TraitType traitType;
+    @Enumerated(EnumType.STRING)
+    private TraitType traitType;
 
-  @Enumerated(EnumType.STRING) private TraitRate menteeRating;
-  @Enumerated(EnumType.STRING) private TraitRate mentorRating;
-  @Enumerated(EnumType.STRING) private TraitRate engineerRating;
+    @Enumerated(EnumType.STRING)
+    private TraitRate menteeRating;
 
-  @CreatedDate private Date createdAt;
-  @LastModifiedBy private Date updatedAt;
+    @Enumerated(EnumType.STRING)
+    private TraitRate mentorRating;
+
+    @Enumerated(EnumType.STRING)
+    private TraitRate engineerRating;
+
+    @CreatedDate
+    private Date createdAt;
+
+    @LastModifiedBy
+    private Date updatedAt;
 }

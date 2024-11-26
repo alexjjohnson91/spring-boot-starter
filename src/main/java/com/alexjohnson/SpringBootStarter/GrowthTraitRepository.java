@@ -8,9 +8,11 @@ import org.springframework.data.repository.query.Param;
 
 public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
 
-  Optional<GrowthTrait> findById(Long id);
+    Optional<GrowthTrait> findById(Long id);
 
-  @Query(value = """
+    @Query(
+            value =
+                    """
         SELECT
           A.GROWTH_ASSESSMENT_ID,
           B.GROWTH_TRAIT_ID,
@@ -22,10 +24,13 @@ public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
           B.STATUS
         FROM GROWTH_ASSESSMENT A
         JOIN GROWTH_TRAIT B ON A.GROWTH_ASSESSMENT_ID = B.GROWTH_ASSESSMENT_ID;
-      """, nativeQuery = true)
-  List<GrowthPlanTrait> findAll();
+      """,
+            nativeQuery = true)
+    List<GrowthPlanTrait> findAll();
 
-  @Query(value = """
+    @Query(
+            value =
+                    """
         SELECT
           A.GROWTH_ASSESSMENT_ID,
           B.GROWTH_TRAIT_ID,
@@ -43,15 +48,18 @@ public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
           A.MENTEE_RATING = COALESCE(:mentee_rating_string, MENTEE_RATING) AND
           A.MENTOR_RATING = COALESCE(:mentor_rating_string, MENTOR_RATING) AND
           A.ENGINEER_RATING = COALESCE(:engineer_rating_string, ENGINEER_RATING);
-      """, nativeQuery = true)
-  List<GrowthPlanTrait> findByTraitTypeOrStatusOrMenteeRatingOrMentorRatingOrEngineerRating(
-      @Param("type") String type,
-      @Param("status_state") String status_state,
-      @Param("mentee_rating_string") String mentee_rating_string,
-      @Param("mentor_rating_string") String mentor_rating_string,
-      @Param("engineer_rating_string") String engineer_rating_string);
+      """,
+            nativeQuery = true)
+    List<GrowthPlanTrait> findByTraitTypeOrStatusOrMenteeRatingOrMentorRatingOrEngineerRating(
+            @Param("type") String type,
+            @Param("status_state") String status_state,
+            @Param("mentee_rating_string") String mentee_rating_string,
+            @Param("mentor_rating_string") String mentor_rating_string,
+            @Param("engineer_rating_string") String engineer_rating_string);
 
-  @Query(value = """
+    @Query(
+            value =
+                    """
             SELECT
               B.DETAIL,
               B.TRAIT_TYPE,
@@ -68,8 +76,9 @@ public interface GrowthTraitRepository extends Repository<GrowthTrait, Long> {
               ON A.GROWTH_ASSESSMENT_ID = B.GROWTH_ASSESSMENT_ID
             WHERE
               A.GROWTH_TRAIT_ID = :id;
-      """, nativeQuery = true)
-  GrowthTraitData findByGrowthTraitId(Long id);
+      """,
+            nativeQuery = true)
+    GrowthTraitData findByGrowthTraitId(Long id);
 
-  GrowthTrait save(GrowthTrait growthTrait);
+    GrowthTrait save(GrowthTrait growthTrait);
 }
