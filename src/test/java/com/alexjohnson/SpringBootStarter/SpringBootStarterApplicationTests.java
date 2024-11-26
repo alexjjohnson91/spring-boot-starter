@@ -9,10 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringBootStarterApplicationTests {
 
-  @Autowired private GrowthTraitController growthTraitController;
+    @Autowired
+    private GrowthTraitController growthTraitController;
 
-  @Test
-  void contextLoads() throws Exception {
-    assertThat(growthTraitController).isNotNull();
-  }
+    @Test
+    void contextLoads() throws Exception {
+        assertThat(growthTraitController).isNotNull();
+    }
 }
