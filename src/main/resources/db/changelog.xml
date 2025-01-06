@@ -35,7 +35,7 @@
       </createTable>
     </changeSet>
     <changeSet author="alex.johnson" id="load data for growth assessment">
-      <loadData file="classpath:/db/growth_assessment.csv" tableName="growth_assessment" separator="," nullValue="">
+      <loadData file="classpath:/db/growth_assessment_new.csv" tableName="growth_assessment" separator="," nullValue="">
         <column name="category" />
         <column name="attribute" />
         <column name="detail" />

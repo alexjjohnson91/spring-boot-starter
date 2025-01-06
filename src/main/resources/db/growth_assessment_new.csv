@@ -1,0 +1,95 @@
+category,attribute,detail,trait_type,mentee_rating,mentor_rating,engineer_rating
+Attitude,Approachable,Available and patient with non-technical peers/stakeholders†,SOFT,Practicing,Practicing,Practicing
+Attitude,Approachable,Available and patient with technical peers/stakeholders†,SOFT,Practicing,Practicing,Practicing
+Attitude,Coachable,Makes changes based on feedback,SOFT,Practicing,Practicing,Practicing
+Attitude,Resilient,Handles roadblocks with care and sensitivity,SOFT,Emerging,Emerging,Emerging
+Attitude,Resilient,Values the expertise of others†(Listen and modify behavior),SOFT,Practicing,Emerging,Practicing
+Communication,Clear,Communicates in the correct manner and setting (Does it need to be said? Does it need to be said by me? Does it need to be said right now?),SOFT,Emerging,Emerging,Emerging
+Communication,Confident,Express disagreement within a healthy conflict framework†,SOFT,Unpracticed,Unpracticed,Emerging
+Communication,Confident,"Can be comfortable speaking in front of ""large groups""",SOFT,Unpracticed,Unpracticed,Emerging
+Communication,Empathetic,Handles various personalities with care and sensitivity†,SOFT,Unpracticed,Unpracticed,Emerging
+Communication,Empathetic,Can communicate trade-off decisions to both technical and non-technical stakeholders. Renegotiate Committment  (Not necessarily always speaking in the language of business),SOFT,Unpracticed,Unpracticed,Unpracticed
+Communication,Empathetic,Can speak in the language of other disciplines†,SOFT,Unpracticed,Unpracticed,Unpracticed
+Communication,Empathetic,Empathize with opposing viewpoints†,SOFT,Unpracticed,Unpracticed,Unpracticed
+Communication,Empathetic,Demonstrates the ability to mine for conflict,SOFT,Unpracticed,Unpracticed,Unpracticed
+Execution,Proactive,Pulls ideas out of others†,SOFT,Emerging,Unpracticed,Emerging
+Execution,Proactive,Understands where the business is going and is bringing innovation to the conversation before the business is asking for it,SOFT,Unpracticed,Unpracticed,Unpracticed
+Execution,Resourceful,Heart of a teacher†(Can†lead someone to a decision without telling them the decision)†,SOFT,Unpracticed,Unpracticed,Unpracticed
+Execution,Resourceful,Can challenge principles at all levels within personal discipline†,SOFT,Unpracticed,Unpracticed,Unpracticed
+Execution,Resourceful,"Elevation of problem, co-authoring of the solution for issues",SOFT,Emerging,Unpracticed,Emerging
+Execution,Strategic,Customer focused mindset†,SOFT,Emerging,Emerging,Emerging
+Execution,Strategic,Considering technical impact [Feasability]†,SOFT,Emerging,Emerging,Emerging
+Execution,Strategic,"Considering customer value [Fidelity, Value]†",SOFT,Emerging,Emerging,Emerging
+Execution,Strategic,Considering business value [Viability],SOFT,Unpracticed,Unpracticed,Unpracticed
+Maturity,Emotional IQ,"Have strong opinions, loosly held",SOFT,Practicing,Emerging,Practicing
+Maturity,Emotional IQ,Demonstrates emotional courage†,SOFT,Unpracticed,Emerging,Practicing
+Maturity,Personal Brand,Actively develops personal brand,SOFT,Unpracticed,Unpracticed,Emerging
+Maturity,Personal Brand,Missional,SOFT,Unpracticed,Unpracticed,Practicing
+Maturity,Poised,Demonstrates the ability to disagree and commit†,SOFT,Emerging,Unpracticed,Emerging
+Maturity,Poised,Takes personal responsibility ,SOFT,Emerging,Emerging,Practicing
+Partnering,Accessibility,Engages socially within the team†,SOFT,Emerging,Emerging,Emerging
+Partnering,Accessibility,Connects with those seeking help within a reasonable timeframe,SOFT,Unpracticed,Unpracticed,Emerging
+Partnering,Relationship,Can market an idea within your squad,SOFT,Unpracticed,Unpracticed,Unpracticed
+Partnering,Relationship,Can market an idea across multiple squads,SOFT,Unpracticed,Unpracticed,Unpracticed
+Partnering,Relationship,Actively building trust with team†,SOFT,Emerging,Emerging,Practicing
+Partnering,Relationship,Actively building trust with other disciplines†,SOFT,Emerging,Emerging,Emerging
+Partnering,Relationship,Actively building trust with business leadership†,SOFT,Unpracticed,Unpracticed,Unpracticed
+Partnering,Shared Urgency,Can work in concurrency†,SOFT,Unpracticed,Unpracticed,Unpracticed
+Partnering,Shared Urgency,Wins and loses as a team,SOFT,Practicing,Emerging,Practicing
+Engineering Ability,Core Engineering,"Baseline skill in coding (Engineer can effectively build, run and debug locally in a language)",HARD,Practicing,Practicing,Radiating
+Engineering Ability,Core Engineering,Foundational (Working) competence in a language,HARD,Practicing,Practicing,Practicing
+Engineering Ability,Core Engineering,Comfortable and fluent working in the entire technology stack,HARD,Emerging,Emerging,Emerging
+Engineering Ability,Core Engineering,Confident in making changes in an existing codebase/feature or other's code,HARD,Practicing,Practicing,Practicing
+Engineering Ability,Core Engineering,Confident to begin a green field codebase/feature (Knows how to start from new),HARD,Practicing,Practicing,Practicing
+Engineering Ability,Core Engineering,"Deep understanding of primary language (Performance Concerns, Best Practices, Which to Choose and Why)",HARD,Emerging,Emerging,Emerging
+Engineering Ability,Core Engineering,Defensive coding (Avoid problematic issues before they arise. Practice of eliminating assumptions in code.),HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Core Engineering,"Self-improvement of craft based on patterns learned through mentorship, feedback or bugs",HARD,Emerging,Emerging,Emerging
+Engineering Ability,Core Engineering,"Zoom out to focus on high impact, multiplier code and design",HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Core Engineering,Evaluates upstream and downstream impact that unlocks company-wide business value,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Core Engineering,Able to communicate and articulate technical information to all levels of the discipline and company,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Core Engineering,Ability to move between multiple squads to solve complex problems and influence growth of the team,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Core Engineering,Can easily switch context while remaining focused on outcomes,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Design,Can understand and use common design patterns,HARD,Unpracticed,Unpracticed,Emerging
+Engineering Ability,Design,Refactoring/De-Duping,HARD,Emerging,Emerging,Emerging
+Engineering Ability,Design,"Create usable technical documentation for self, team or someone with context to understand",HARD,Unpracticed,Unpracticed,Emerging
+Engineering Ability,Design,Edge/corner cases define the boundaries of personal domain,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Design,"Active management of security, privacy and scale concerns",HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Design,Best practices around architecture and pattern choices,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Design,Creates data flows as a part of engineering efforts,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Design,"Knows when to create shared components (APIs, Libraries, etc.)",HARD,Emerging,Unpracticed,Emerging
+Engineering Ability,Design,"Can identify, communicate and†audit†the key risks in design and architecture (key things to pay attention to)†for solutions they arenít involved in†delivering the details",HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Design,Consider usability of the product and collaborates with appropriate disciplines,HARD,Emerging,Unpracticed,Emerging
+Engineering Ability,Design,Contributes to the channel's technical vision and strategy,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Design,Drives architecture across a channel,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Maintainability,Fluency in unit testing,HARD,Practicing,Practicing,Practicing
+Engineering Ability,Maintainability,"Happy path testing, exception handling, downstream impact (Not necessarily unit testing)",HARD,Practicing,Emerging,Practicing
+Engineering Ability,Maintainability,"Considers readability of code (Understands the audience of their code is other engineers, not the computer.)",HARD,Practicing,Practicing,Emerging
+Engineering Ability,Maintainability,"Consider unit tests for all code, implement and maintains appropriately",HARD,Practicing,Emerging,Emerging
+Engineering Ability,Maintainability,Consider integration points and avoids fragility,HARD,Emerging,Emerging,Emerging
+Engineering Ability,Maintainability,Consider SEO impact,HARD,Unpracticed,Unpracticed,Emerging
+Engineering Ability,Mentoring,Mentors other engineers in areas of personal strength,HARD,Unpracticed,Unpracticed,Emerging
+Engineering Ability,Mentoring,Speaks the language of engineering,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Mentoring,Finds technology industry trends and bring the knowledge back into the team,HARD,Unpracticed,Unpracticed,Emerging
+Engineering Ability,Mentoring,"Engineering is a craft to hone, not a skill to use (You have seen someone do something better than you and you want to grow yourself the same way. Pursuing excellence and expertise.)",HARD,Emerging,Emerging,Emerging
+Engineering Ability,Mentoring,Growth Mindset: share new craft growth with other engineers,HARD,Unpracticed,Emerging,Emerging
+Engineering Ability,Monitoring,Evaluate technical skills of candidates through the interview process,HARD,Unpracticed,Unpracticed,Unpracticed
+Engineering Ability,Monitoring,Owns alerts and response (Can diagnose an application issue without reaching out to systems engineering),HARD,Emerging,Unpracticed,Emerging
+Engineering Ability,Monitoring,Log appropriate code diagnostic information,HARD,Unpracticed,Unpracticed,Emerging
+Higher Level Thinking,Business Accumen,Can relate work being executed on to a business problem ,HARD,Unpracticed,Unpracticed,Practicing
+Higher Level Thinking,Business Accumen,Can break down work using business context even when ambiguous,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Actively leads initiatives for the team,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Sits with other business funtions (Learn from their experiences and problems.),HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,"Measures the impact of code quality on customer rating, crash rates, bug rates, customer success issue counts and time to market",HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Technical writing is written with both technical and business stakeholders in mind,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Creates monitoring dashboards to track the health of the code deployed,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Has enough business acumen to sit in business strategy meetings,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Considers [and can explain the impact to] Global/EA while making technical decisions,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Partners with leadership to make the best technical decision for the business,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,Creates clarity from ambiguity,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Business Accumen,"Discovers, introduces and champions innovation while considering total cost of ownership",HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Workflow Management,"Connected to the flow of work of the team (Metrics, Decomposition, Engaged in Rhythms)",HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Workflow Management,Pull cards and work them with self-sufficiency (Knows how to get unblocked.),HARD,Practicing,Practicing,Practicing
+Higher Level Thinking,Workflow Management,Uncovers and surfaces opportunities for technical improvement,HARD,Emerging,Emerging,Emerging
+Higher Level Thinking,Workflow Management,Successful creating work that spans multiple workstreams. Begins to blend and coordinate activities while creating the work,HARD,Unpracticed,Unpracticed,Unpracticed
+Higher Level Thinking,Workflow Management,"Understands that tickets don't stop when the merge button is pressed, but considers up and downstream systems affected by the code created",HARD,Unpracticed,Unpracticed,Unpracticed
+
