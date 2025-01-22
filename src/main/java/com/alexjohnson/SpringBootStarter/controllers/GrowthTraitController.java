@@ -1,8 +1,12 @@
-package com.alexjohnson.SpringBootStarter;
+package com.alexjohnson.SpringBootStarter.controllers;
 
+import com.alexjohnson.SpringBootStarter.dtos.GrowthTrait;
+import com.alexjohnson.SpringBootStarter.dtos.interfaces.GrowthPlanTrait;
+import com.alexjohnson.SpringBootStarter.dtos.interfaces.GrowthTraitData;
 import com.alexjohnson.SpringBootStarter.enums.Status;
 import com.alexjohnson.SpringBootStarter.enums.TraitRate;
 import com.alexjohnson.SpringBootStarter.enums.TraitType;
+import com.alexjohnson.SpringBootStarter.services.GrowthTraitService;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,17 +24,17 @@ public class GrowthTraitController {
     private final GrowthTraitService growthTraitService;
 
     @PostMapping(path = "/growth-traits/save-all")
-    void saveAll() {
+    public void saveAll() {
         growthTraitService.saveAllGrowthTraits();
     }
 
     @GetMapping(path = "/growth-traits/{id}")
-    GrowthTraitData getByGrowthTraitId(@PathVariable Long id) {
+    public GrowthTraitData getByGrowthTraitId(@PathVariable Long id) {
         return growthTraitService.getByGrowthTraitId(id);
     }
 
     @GetMapping(path = "/growth-traits")
-    List<GrowthPlanTrait> getGrowthTraitsByRatings(
+    public List<GrowthPlanTrait> getGrowthTraitsByRatings(
             @RequestParam(name = "trait_type", required = false) TraitType trait_type,
             @RequestParam(name = "status", required = false) Status status,
             @RequestParam(name = "mentee_rating", required = false) TraitRate mentee_rating,
@@ -45,12 +49,12 @@ public class GrowthTraitController {
     }
 
     @PatchMapping(path = "/growth-traits/{id}/next-status")
-    GrowthTrait moveTraitToNextStatus(@PathVariable Long id) {
+    public GrowthTrait moveTraitToNextStatus(@PathVariable Long id) {
         return growthTraitService.moveTraitToNextStatus(id);
     }
 
     @PatchMapping(path = "/growth-traits/{id}/prev-status")
-    GrowthTrait moveTraitToPrevStatus(@PathVariable Long id) {
+    public GrowthTrait moveTraitToPrevStatus(@PathVariable Long id) {
         return growthTraitService.moveTraitToPrevStatus(id);
     }
 }

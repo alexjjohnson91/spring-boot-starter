@@ -1,5 +1,8 @@
-package com.alexjohnson.SpringBootStarter;
+package com.alexjohnson.SpringBootStarter.repositories;
 
+import com.alexjohnson.SpringBootStarter.dtos.GrowthTrait;
+import com.alexjohnson.SpringBootStarter.dtos.interfaces.GrowthPlanTrait;
+import com.alexjohnson.SpringBootStarter.dtos.interfaces.GrowthTraitData;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;

@@ -1,7 +1,14 @@
-package com.alexjohnson.SpringBootStarter;
+package com.alexjohnson.SpringBootStarter.services;
 
+import com.alexjohnson.SpringBootStarter.dtos.GrowthAssessment;
+import com.alexjohnson.SpringBootStarter.dtos.GrowthTrait;
+import com.alexjohnson.SpringBootStarter.dtos.interfaces.GrowthPlanTrait;
+import com.alexjohnson.SpringBootStarter.dtos.interfaces.GrowthTraitData;
 import com.alexjohnson.SpringBootStarter.enums.Status;
 import com.alexjohnson.SpringBootStarter.enums.TraitRate;
+import com.alexjohnson.SpringBootStarter.exceptions.GrowthTraitNotFoundException;
+import com.alexjohnson.SpringBootStarter.repositories.GrowthAssessmentRepository;
+import com.alexjohnson.SpringBootStarter.repositories.GrowthTraitRepository;
 import java.util.Date;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +22,7 @@ public class GrowthTraitService {
     private final GrowthTraitRepository growthTraitRepository;
     private final GrowthAssessmentRepository growthAssessmentRepository;
 
-    GrowthTraitData getByGrowthTraitId(Long id) {
+    public GrowthTraitData getByGrowthTraitId(Long id) {
         return growthTraitRepository.findByGrowthTraitId(id);
     }
 

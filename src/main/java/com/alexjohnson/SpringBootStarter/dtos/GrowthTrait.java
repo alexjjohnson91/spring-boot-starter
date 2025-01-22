@@ -1,4 +1,4 @@
-package com.alexjohnson.SpringBootStarter;
+package com.alexjohnson.SpringBootStarter.dtos;
 
 import com.alexjohnson.SpringBootStarter.enums.Status;
 import jakarta.persistence.Entity;

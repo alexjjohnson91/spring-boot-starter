@@ -1,4 +1,4 @@
-package com.alexjohnson.SpringBootStarter;
+package com.alexjohnson.SpringBootStarter.dtos.interfaces;
 
 import com.alexjohnson.SpringBootStarter.enums.Status;
 import com.alexjohnson.SpringBootStarter.enums.TraitType;
