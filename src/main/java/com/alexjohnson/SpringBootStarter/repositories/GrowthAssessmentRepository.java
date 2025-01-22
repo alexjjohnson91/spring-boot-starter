@@ -1,5 +1,6 @@
-package com.alexjohnson.SpringBootStarter;
+package com.alexjohnson.SpringBootStarter.repositories;
 
+import com.alexjohnson.SpringBootStarter.dtos.GrowthAssessment;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.repository.Repository;
