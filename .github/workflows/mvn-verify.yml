@@ -1,0 +1,41 @@
+name: Maven Verify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    services:
+      db:
+        image: postgres:latest
+        ports:
+          - "5433:5432"
+        env:
+          POSTGRES_DB: mydatabase
+          POSTGRES_USER: admin
+          POSTGRES_PASSWORD: admin
+        volumes:
+          - pgdata:/var/lib/postgresql/data
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Java (adjust the Java version if needed)
+      - name: Set up JDK 21
+        uses: actions/setup-java@v2
+        with:
+          java-version: '21'
+          distribution: 'adopt'
+
+      # Run Maven clean verify
+      - name: Run Maven Verify
+        run: mvn clean verify
