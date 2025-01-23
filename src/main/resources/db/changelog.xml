@@ -1,113 +1,88 @@
 <databaseChangeLog
-    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet author="alex.johnson" id="create growth assessment table">
-      <createTable tableName="growth_assessment">
-        <column name="growth_assessment_id" type="BIGINT" autoIncrement="true">
-          <constraints nullable="false" primaryKey="true" />
-        </column>
-        <column name="category" type="VARCHAR">
-          <constraints nullable="true" />
-        </column>
-        <column name="attribute" type="VARCHAR">
-          <constraints nullable="true" />
-        </column>
-        <column name="detail" type="VARCHAR">
-          <constraints nullable="true" />
-        </column>
-        <column name="trait_type" type="VARCHAR">
-          <constraints nullable="true"/>
-        </column>
-        <column name="mentee_rating" type="VARCHAR">
-          <constraints nullable="true"/>
-        </column>
-        <column name="mentor_rating" type="VARCHAR">
-          <constraints nullable="true"/>
-        </column>
-        <column name="engineer_rating" type="VARCHAR">
-          <constraints nullable="true"/>
-        </column>
-        <column name="created_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
-        <column name="updated_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
-      </createTable>
-    </changeSet>
-    <changeSet author="alex.johnson" id="load data for growth assessment">
-      <loadData file="classpath:/db/growth_assessment_new.csv" tableName="growth_assessment" separator="," nullValue="">
-        <column name="category" />
-        <column name="attribute" />
-        <column name="detail" />
-        <column name="trait_type" />
-        <column name="mentee_rating" />
-        <column name="mentor_rating" />
-        <column name="engineer_rating" />
-      </loadData>
+    <changeSet author="alex.johnson" id="create user table">
+        <createTable tableName="user_table">
+          <column name="user_id" type="UUID">
+            <constraints nullable="false" primaryKey="true"/>
+          </column>
+          <column name="first_name" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password_hash" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()"/>
+        </createTable>
     </changeSet>
     <changeSet author="alex.johnson" id="create growth trait table">
-      <createTable tableName="growth_trait">
-        <column name="growth_trait_id" type="BIGINT" autoIncrement="true">
-          <constraints nullable="false" primaryKey="true" />
-        </column>
-        <column name="growth_assessment_id" type="BIGINT">
-          <constraints nullable="false" />
-        </column>
-        <column name="result" type="VARCHAR">
-          <constraints nullable="true" />
-        </column>
-        <column name="opportunity" type="VARCHAR">
-          <constraints nullable="true" />
-        </column>
-        <column name="next_step" type="VARCHAR">
-          <constraints nullable="true" />
-        </column>
-        <column name="goal" type="VARCHAR">
-          <constraints nullable="true"/>
-        </column>
-        <column name="start_date" type="DATE">
-          <constraints nullable="true"/>
-        </column>
-        <column name="status" type="VARCHAR">
-          <constraints nullable="true"/>
-        </column>
-        <column name="age" type="INT">
-          <constraints nullable="true"/>
-        </column>
-        <column name="notes" type="VARCHAR">
-          <constraints nullable="true"/>
-        </column>
-        <column name="created_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
-        <column name="updated_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
-      </createTable>
+        <createTable tableName="growth_trait">
+            <column name="growth_trait_id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="category" type="VARCHAR">
+                <constraints nullable="true"/>
+            </column>
+            <column name="attribute" type="VARCHAR">
+                <constraints nullable="true"/>
+            </column>
+            <column name="detail" type="VARCHAR">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trait_type" type="VARCHAR">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()"/>
+        </createTable>
     </changeSet>
-    <changeSet author="alex.johnson" id="change ratings to uppercase">
-      <update tableName="growth_assessment">
-        <column name="mentee_rating" valueComputed="upper(mentee_rating)" />
-        <column name="mentor_rating" valueComputed="upper(mentor_rating)" />
-        <column name="engineer_rating" valueComputed="upper(engineer_rating)" />
-        <column name="updated_at" valueComputed="NOW()" />
-      </update>
+    <changeSet id="create user ratings table" author="alex.johnson">
+        <createTable tableName="user_ratings">
+            <column name="user_trait_ratings" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="fk_user_id" type="UUID">
+                <constraints nullable="true"/>
+            </column>
+            <column name="fk_growth_trait_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="mentee_rating" type="VARCHAR">
+                <constraints nullable="true"/>
+            </column>
+            <column name="mentor_rating" type="VARCHAR">
+                <constraints nullable="true"/>
+            </column>
+            <column name="engineer_rating" type="VARCHAR">
+                <constraints nullable="true"/>
+            </column>
+            <column name="rating_level_difference" type="INT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
     </changeSet>
-    <changeSet author="alex.johnson" id="create user table">
-      <createTable tableName="user_table">
-        <column name="user_id" type="BIGINT" autoIncrement="true">
-          <constraints nullable="false" primaryKey="true" />
-        </column>
-        <column name="first_name" type="VARCHAR">
-          <constraints nullable="false" />
-        </column>
-        <column name="last_name" type="VARCHAR">
-          <constraints nullable="false" />
-        </column>
-        <column name="email" type="VARCHAR">
-          <constraints nullable="false" />
-        </column>
-        <column name="password_hash" type="VARCHAR">
-          <constraints nullable="false"/>
-        </column>
-        <column name="created_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
-        <column name="updated_at" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="NOW()" />
-      </createTable>
+    <changeSet id="adding foreign keys to ratings" author="alex.johnson">
+        <addForeignKeyConstraint
+                baseTableName="user_ratings"
+                baseColumnNames="fk_user_id"
+                constraintName="fk_ratings_user"
+                referencedTableName="user_table"
+                referencedColumnNames="user_id"/>
+        <addForeignKeyConstraint
+                baseTableName="user_ratings"
+                baseColumnNames="fk_growth_trait_id"
+                constraintName="fk_ratings_growth_trait"
+                referencedTableName="growth_trait"
+                referencedColumnNames="growth_trait_id"/>
     </changeSet>
 </databaseChangeLog>
