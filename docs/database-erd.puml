@@ -1,0 +1,77 @@
+@startuml
+
+rectangle #LightGrey {
+
+    entity "growth_trait" {
+      * growth_trait_id
+      --
+      * engineer_level_id
+      --
+
+      attribute
+      category
+      detail
+      trait_type
+
+      created_at
+      updated_at
+    }
+
+    entity "engineer_level" {
+        * engineer_level_id
+        --
+        * growth_trait_id
+        --
+
+        engineer_one_rating
+        engineer_two_rating
+
+
+        created_at
+        updated_at
+    }
+
+}
+entity "user" {
+  * id
+  --
+  username
+  email
+  password
+  current_level
+
+  created_at
+  updated_at
+}
+
+entity "trait_assessment" {
+   * trait_assessment_id
+   --
+   * user_id
+   * growth_trait_id
+   * rating_id
+   --
+
+    created_at
+    updated_at
+}
+
+entity "rating" {
+    * rating_id
+    --
+    self_rating
+    leader_rating
+
+    user_id
+    growth_trait_id
+
+    created_at
+    updated_at
+}
+
+"user" --{ "trait_assessment"
+"growth_trait" -- "trait_assessment"
+"rating" -- "trait_assessment"
+"growth_trait" -- "engineer_level"
+
+@enduml
